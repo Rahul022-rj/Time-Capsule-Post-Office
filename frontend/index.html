@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Time Capsule Post Office</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">⌛ Time Capsule</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#create">Create Letter</a>
+        <a href="#capsules">My Capsules</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tagline">YOUR MESSAGE. YOUR FUTURE.</span>
+
+        <h1>Messages From <span>The Past</span></h1>
+
+        <p>
+            Write something today. Let your future self
+            discover it tomorrow.
+        </p>
+
+        <a href="#create" class="main-btn">
+            Create Your Time Capsule
+        </a>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat-card">
+        <h2 id="totalCount">0</h2>
+        <p>Total Capsules</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="lockedCount">0</h2>
+        <p>Locked Letters</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="unlockedCount">0</h2>
+        <p>Unlocked Letters</p>
+    </div>
+</section>
+
+<section class="container" id="create">
+
+    <div class="section-heading">
+        <span>CREATE SOMETHING MEANINGFUL</span>
+        <h2>Create Your Time Capsule</h2>
+        <p>Write a message that your future self will remember.</p>
+    </div>
+
+    <form id="letterForm">
+
+        <label for="title">Letter Title</label>
+
+        <input
+            type="text"
+            id="title"
+            placeholder="A message to my future self"
+            maxlength="100"
+            required
+        >
+
+        <label for="content">Your Message</label>
+
+        <textarea
+            id="content"
+            placeholder="Write your thoughts, dreams and memories..."
+            maxlength="10000"
+            required
+        ></textarea>
+
+        <label for="unlockAt">Unlock Date and Time</label>
+
+        <input
+            type="datetime-local"
+            id="unlockAt"
+            required
+        >
+
+        <button type="submit" id="submitBtn">
+            Seal My Letter ✉
+        </button>
+
+        <p id="message"></p>
+
+    </form>
+
+</section>
+
+<section class="container" id="capsules">
+
+    <div class="section-heading">
+        <span>YOUR PERSONAL COLLECTION</span>
+        <h2>My Time Capsules</h2>
+        <p>All your memories, safely waiting for the future.</p>
+    </div>
+
+    <div id="letterList" class="letter-list">
+        Loading letters...
+    </div>
+
+</section>
+
+<div id="modal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <button id="closeModal" class="close-btn">×</button>
+
+        <div class="envelope-icon">✉</div>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDate" class="modal-date"></p>
+
+        <div id="modalBody" class="letter-body"></div>
+
+    </div>
+
+</div>
+
+<footer>
+    <h3>⌛ Time Capsule Post Office</h3>
+    <p>Preserve today's memories for tomorrow's discovery.</p>
+    <p>© 2026 Time Capsule Post Office | MCA Mini Project</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

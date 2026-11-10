@@ -1,0 +1,397 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    background: #0b1020;
+    color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #111a30;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    color: #b69cff;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d5d9e5;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b69cff;
+}
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at 50% 30%,
+        #37255f 0%, #131b32 45%, #0b1020 100%);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.tagline,
+.section-heading span {
+    color: #b69cff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 60px);
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #b69cff;
+}
+
+.hero p {
+    color: #bac2d4;
+    font-size: 17px;
+    margin-bottom: 32px;
+}
+
+.main-btn,
+button {
+    background: linear-gradient(135deg, #9869f3, #7044d2);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.main-btn:hover,
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.12);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 850px;
+    margin: -30px auto 50px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.stat-card {
+    text-align: center;
+    background: #18233c;
+    padding: 25px 15px;
+    border: 1px solid #2a3652;
+    border-radius: 12px;
+}
+
+.stat-card h2 {
+    color: #b69cff;
+    font-size: 30px;
+}
+
+.stat-card p {
+    color: #aab5ca;
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+.container {
+    width: 85%;
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 35px;
+    background: #141e35;
+    border: 1px solid #26324e;
+    border-radius: 15px;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #aeb9cc;
+    line-height: 1.6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #35415d;
+    border-radius: 8px;
+    background: #0b1020;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #a17bf4;
+    box-shadow: 0 0 0 2px #9869f333;
+}
+
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+input[type="datetime-local"] {
+    color-scheme: dark;
+}
+
+form button {
+    margin-top: 12px;
+    width: 100%;
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#message {
+    text-align: center;
+    font-weight: 600;
+    min-height: 20px;
+}
+
+.success {
+    color: #61d6a0;
+}
+
+.error {
+    color: #ff8585;
+}
+
+.letter-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.letter-card {
+    background: #202c46;
+    padding: 22px;
+    border: 1px solid #34415e;
+    border-radius: 12px;
+    transition: 0.3s;
+    min-width: 0;
+}
+
+.letter-card:hover {
+    border-color: #9869f3;
+    transform: translateY(-3px);
+}
+
+.letter-card h3 {
+    font-size: 19px;
+    margin-bottom: 13px;
+    overflow-wrap: anywhere;
+}
+
+.letter-card p {
+    color: #c0c9db;
+    font-size: 14px;
+    margin: 9px 0;
+    overflow-wrap: anywhere;
+}
+
+.status {
+    color: #c2a5ff !important;
+    font-weight: 700;
+}
+
+.countdown {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.card-actions button {
+    font-size: 13px;
+    padding: 10px 15px;
+}
+
+.delete-btn {
+    background: #a83d54;
+}
+
+.empty-state {
+    color: #b6c0d2;
+    text-align: center;
+    padding: 35px;
+    background: #202c46;
+    border-radius: 10px;
+    grid-column: 1 / -1;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: #000c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal-content {
+    background: #18233c;
+    border: 1px solid #455071;
+    padding: 35px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 15px;
+}
+
+.close-btn {
+    float: right;
+    padding: 5px 13px;
+    font-size: 22px;
+}
+
+.envelope-icon {
+    font-size: 40px;
+    color: #b69cff;
+    margin: 20px 0;
+}
+
+.modal-content h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.modal-date {
+    color: #b69cff;
+    margin-bottom: 20px;
+}
+
+.letter-body {
+    color: #e0e6f1;
+    line-height: 1.9;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    background: #111a30;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 70px;
+}
+
+footer h3 {
+    color: #b69cff;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #9ca9bf;
+    margin: 8px 0;
+    font-size: 13px;
+}
+
+@media(max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+    }
+
+    .container {
+        width: 92%;
+        padding: 22px;
+    }
+
+    .letter-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
