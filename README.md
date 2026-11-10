@@ -87,3 +87,37 @@ Presidency University, Bengaluru
 ### 4. API Testing
 ![API Testing](screenshots/api-testing.png)
 
+
+## System Architecture
+
+The Time Capsule Post Office follows a client-server architecture. The frontend communicates with the Node.js HTTP server through HTTP requests. The backend routes requests to the letter controller, which validates input, checks unlock times, and interacts with JSON-based file storage.
+
+```mermaid
+flowchart TD
+    A["User"] --> B["Frontend<br/>HTML, CSS, JavaScript"]
+    B -->|"HTTP Requests"| C["Node.js HTTP Server"]
+    C --> D["URL Routing<br/>routes.js"]
+    D --> E["Letter Controller<br/>letterController.js"]
+    E --> F["Input Validation"]
+    E --> G["Time Lock Verification"]
+    E --> H["Storage Module<br/>storage.js"]
+    H --> I[("letters.json")]
+    I --> H
+    H --> E
+    E -->|"JSON Response"| C
+    C --> B
+    B --> J["Display Letters<br/>Countdown and Status"]
+```
+
+### Architecture Components
+
+| Component | Responsibility |
+|---|---|
+| Frontend | User interface and countdown display |
+| HTTP Server | Handles incoming HTTP requests |
+| Routes | Directs requests to the correct controller |
+| Letter Controller | Creates, retrieves, and deletes letters |
+| Validation | Checks title, content, and unlock date |
+| Time Lock Verification | Prevents access before the unlock date |
+| Storage Module | Reads and writes letter data |
+| JSON File | Stores capsule records |
