@@ -71,3 +71,19 @@ Rahul Jaiswal
 Master of Computer Applications (MCA)
 
 Presidency University, Bengaluru
+
+
+## Application Screenshots
+
+### 1. Homepage
+![Homepage](screenshots/homepage.png)
+
+### 2. Create Time Capsule
+![Create Capsule](screenshots/create-capsule.png)
+
+### 3. My Time Capsules
+![My Capsules](screenshots/my-capsules.png)
+
+### 4. API Testing
+![API Testing](screenshots/api-testing.png)
+
