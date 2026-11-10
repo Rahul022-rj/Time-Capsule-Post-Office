@@ -6,7 +6,7 @@ const { URL } = require("url");
 
 const handleRoutes = require("./routes");
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const frontendPath = path.join(__dirname, "../frontend");
 
@@ -76,6 +76,6 @@ const server = http.createServer(async (req, res) => {
     }
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, "0.0.0.0", () => {
     console.log(`Time Capsule server running at http://localhost:${PORT}`);
 });
